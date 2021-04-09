@@ -1,0 +1,25 @@
+.overflow-hidden {
+    overflow: hidden;
+    height: 100vh;
+  }
+  
+  #nav {
+    padding-top: 10px;
+    margin-bottom: 30px;
+    a {
+      color: $black;
+      font-family: $font;
+      font-weight: $semi-bold;
+      font-size: 18px;
+  
+      &.router-link-exact-active {
+        color: $header;
+        text-decoration: underline;
+      }
+
+      span {
+        margin: 0 5px;
+      }
+    }
+  }
+  
