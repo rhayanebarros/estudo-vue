@@ -27,6 +27,16 @@ const routes = [
     path: '/exercicio-03',
     name: 'exercicio-03',
     component: () => import(/* webpackChunkName: "exercicio-03" */ '../views/exercicio-03.vue')
+  },
+  {
+    path: '/exercicio-evento-01',
+    name: 'exercicio-evento-01',
+    component: () => import(/* webpackChunkName: "exercicio-evento-01" */ '../views/exercicio-evento-01.vue')
+  },
+  {
+    path: '/exercicio-evento-02',
+    name: 'exercicio-evento-02',
+    component: () => import(/* webpackChunkName: "exercicio-evento-02" */ '../views/exercicio-evento-02.vue')
   }
 ]
 

@@ -3,7 +3,9 @@
     <router-link to="/">Home<span>|</span></router-link>
     <router-link to="/exercicio-01">Exercício 01<span>|</span></router-link>
     <router-link to="/exercicio-02">Exercício 02<span>|</span></router-link>
-    <router-link to="/exercicio-03">Exercício 03</router-link>
+    <router-link to="/exercicio-03">Exercício 03<span>|</span></router-link>
+    <router-link to="/exercicio-evento-01">Exercício Evento 01<span>|</span></router-link>
+    <router-link to="/exercicio-evento-02">Exercício Evento 02</router-link>
   </div>
 </template>
 
