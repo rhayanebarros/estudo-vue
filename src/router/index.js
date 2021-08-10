@@ -37,6 +37,16 @@ const routes = [
     path: '/exercicio-evento-02',
     name: 'exercicio-evento-02',
     component: () => import(/* webpackChunkName: "exercicio-evento-02" */ '../views/exercicio-evento-02.vue')
+  },
+  {
+    path: '/propriedades-reativas-01',
+    name: 'propriedades-reativas-01',
+    component: () => import(/* webpackChunkName: "propriedades-reativas-01" */ '../views/propriedades-reativas-01.vue')
+  },
+  {
+    path: '/propriedades-reativas-02',
+    name: 'propriedades-reativas-02',
+    component: () => import(/* webpackChunkName: "propriedades-reativas-02" */ '../views/propriedades-reativas-02.vue')
   }
 ]
 

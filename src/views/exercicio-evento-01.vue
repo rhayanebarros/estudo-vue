@@ -3,6 +3,7 @@
     <img alt="Vue logo" src="../assets/logo.png">
     <Nav/>
     <p>{{ contador }}</p>
+    <p>{{ contador > 10 ? 'Maior que 10' : 'Menor que 10' }}</p>
     <button v-on:click="somar">Somar 1</button>
     <p v-on:mousemove="atualizarXY">
       Mouse: {{x}} e {{y}}
