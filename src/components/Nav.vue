@@ -7,7 +7,8 @@
     <router-link to="/exercicio-evento-01">Exercício Evento 01<span>|</span></router-link>
     <router-link to="/exercicio-evento-02">Exercício Evento 02<span>|</span></router-link>
     <router-link to="/propriedades-reativas-01">Propriedades Reativas 01<span>|</span></router-link>
-    <router-link to="/propriedades-reativas-02">Propriedades Reativas 02</router-link>
+    <router-link to="/propriedades-reativas-02">Propriedades Reativas 02<span>|</span></router-link>
+    <router-link to="/estilo-dinamico-01">Estilo Dinamico 01</router-link>
   </div>
 </template>
 

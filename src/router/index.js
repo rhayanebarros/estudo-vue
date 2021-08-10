@@ -47,6 +47,11 @@ const routes = [
     path: '/propriedades-reativas-02',
     name: 'propriedades-reativas-02',
     component: () => import(/* webpackChunkName: "propriedades-reativas-02" */ '../views/propriedades-reativas-02.vue')
+  },
+  {
+    path: '/estilo-dinamico-01',
+    name: 'estilo-dinamico-01',
+    component: () => import(/* webpackChunkName: "estilo-dinamico-01" */ '../views/estilo-dinamico-01.vue')
   }
 ]
 
