@@ -1,8 +1,9 @@
 <template>
-  <div class="home">
+  <div class="condicionais">
     <Logo/>
-    <HelloWorld msg="Bem vindo ao estudo de Vue"/>
+    <HelloWorld msg="Condicionais e Listas"/>
     <Nav/>
+    <NavCondicionais/>
   </div>
 </template>
 
@@ -11,13 +12,15 @@
 import Logo from '@/components/Logo.vue'
 import HelloWorld from '@/components/HelloWorld.vue'
 import Nav from '@/components/Nav.vue'
+import NavCondicionais from '@/components/NavCondicionais.vue'
 
 export default {
-  name: 'Home',
+  name: 'Condicionais',
   components: {
     Logo,
     HelloWorld,
-    Nav
+    Nav,
+    NavCondicionais
   }
 }
 </script>

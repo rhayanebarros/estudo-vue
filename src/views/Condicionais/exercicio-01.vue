@@ -1,7 +1,8 @@
 <template>
   <div class="exercicio-01">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <Nav/>
+    <Logo/>
+    <VoltarCondicionais/>
+    <h1>Titulo</h1>
     <input type="text" v-on:input = "alterarTitulo">
     <p class="title">{{ titulo }}</p>
   </div>
@@ -9,15 +10,18 @@
 
 <script>
 // @ is an alias to /src
-import Nav from '@/components/Nav.vue'
+import Logo from '@/components/Logo.vue'
+import VoltarCondicionais from '@/components/VoltarCondicionais.vue'
 
 export default {
   name: 'exercicio-01',
   components: {
-    Nav
+    Logo,
+    VoltarCondicionais
   },
   data () {
     return {
+      name: '',
       titulo: 'Usando Vue.js 2'
     }
   },

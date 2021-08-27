@@ -1,7 +1,7 @@
 <template>
   <div class="exercicio-evento-02">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <Nav/>
+    <Logo/>
+    <VoltarInteracao/>
      <!-- 1) Exiba um alert quando o botão for clicado -->
     <div>
         <button v-on:click="alerta">Exibir Alerta</button>
@@ -23,12 +23,14 @@
 
 <script>
 // @ is an alias to /src
-import Nav from '@/components/Nav.vue'
+import Logo from '@/components/Logo.vue'
+import VoltarInteracao from '@/components/VoltarInteracao.vue'
 
 export default {
   name: 'exercicio-evento-02',
   components: {
-    Nav
+    Logo,
+    VoltarInteracao
   },
   data () {
     return {

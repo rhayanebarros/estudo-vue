@@ -1,7 +1,7 @@
 <template>
   <div class="propriedades-reativas-02">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <Nav/>
+    <Logo/>
+    <VoltarInteracao/>
     <!-- 1) Exibir em "resultado" o texto 'Valor Diferente' enquanto -->
     <!-- "valor" for diferente de 37 - "valor" é alterado pelos botões. -->
     <!-- Mostrar 'Valor Igual' quando "valor" for igual a 37 -->
@@ -18,12 +18,14 @@
 
 <script>
 // @ is an alias to /src
-import Nav from '@/components/Nav.vue'
+import Logo from '@/components/Logo.vue'
+import VoltarInteracao from '@/components/VoltarInteracao.vue'
 
 export default {
   name: 'propriedades-reativas-02',
   components: {
-    Nav
+    Logo,
+    VoltarInteracao
   },
   data () {
     return {

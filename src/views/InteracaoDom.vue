@@ -1,8 +1,9 @@
 <template>
-  <div class="home">
+  <div class="interacao">
     <Logo/>
-    <HelloWorld msg="Bem vindo ao estudo de Vue"/>
+    <HelloWorld msg="Interação com a DOM"/>
     <Nav/>
+    <NavInteracao/>
   </div>
 </template>
 
@@ -11,13 +12,15 @@
 import Logo from '@/components/Logo.vue'
 import HelloWorld from '@/components/HelloWorld.vue'
 import Nav from '@/components/Nav.vue'
+import NavInteracao from '@/components/NavInteracao.vue'
 
 export default {
-  name: 'Home',
+  name: 'InteracaoDom',
   components: {
     Logo,
     HelloWorld,
-    Nav
+    Nav,
+    NavInteracao
   }
 }
 </script>

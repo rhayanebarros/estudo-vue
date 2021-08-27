@@ -1,7 +1,7 @@
 <template>
   <div class="exercicio-evento-01">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <Nav/>
+    <Logo/>
+    <VoltarInteracao/>
     <p>{{ contador }}</p>
     <p>{{ contador > 10 ? 'Maior que 10' : 'Menor que 10' }}</p>
     <button v-on:click="somar">Somar 1</button>
@@ -21,12 +21,14 @@
 
 <script>
 // @ is an alias to /src
-import Nav from '@/components/Nav.vue'
+import Logo from '@/components/Logo.vue'
+import VoltarInteracao from '@/components/VoltarInteracao.vue'
 
 export default {
   name: 'exercicio-evento-01',
   components: {
-    Nav
+    Logo,
+    VoltarInteracao
   },
   data () {
     return {

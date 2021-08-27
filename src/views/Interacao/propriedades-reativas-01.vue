@@ -1,7 +1,7 @@
 <template>
   <div class="propriedades-reativas-01">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <Nav/>
+    <Logo/>
+    <VoltarInteracao/>
     <p class="title">{{ titulo }}</p>
     <!-- v-bind seria o bind de uma unica direção do js para o html -->
     <!-- v-on seria o evento que aconteceu no template(html) e faço uma ação para atualizar os dados dentro da minha instacia-->
@@ -19,12 +19,14 @@
 
 <script>
 // @ is an alias to /src
-import Nav from '@/components/Nav.vue'
+import Logo from '@/components/Logo.vue'
+import VoltarInteracao from '@/components/VoltarInteracao.vue'
 
 export default {
   name: 'propriedades-reativas-01',
   components: {
-    Nav
+    Logo,
+    VoltarInteracao
   },
   data () {
     return {

@@ -11,47 +11,71 @@ const routes = [
     component: Home
   },
   {
-    path: '/exercicio-01',
+    path: '/interacao',
+    name: 'InteracaoDom',
+    // route level code-splitting
+    // this generates a separate chunk (interacao-dom.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "exercicio-01" */ '../views/InteracaoDom.vue')
+  },
+  {
+    path: '/interacao/exercicio-01',
     name: 'exercicio-01',
     // route level code-splitting
     // this generates a separate chunk (exercicio-01.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "exercicio-01" */ '../views/exercicio-01.vue')
+    component: () => import(/* webpackChunkName: "exercicio-01" */ '../views/Interacao/exercicio-01.vue')
   },
   {
-    path: '/exercicio-02',
+    path: '/interacao/exercicio-02',
     name: 'exercicio-02',
-    component: () => import(/* webpackChunkName: "exercicio-02" */ '../views/exercicio-02.vue')
+    component: () => import(/* webpackChunkName: "exercicio-02" */ '../views/Interacao/exercicio-02.vue')
   },
   {
-    path: '/exercicio-03',
+    path: '/interacao/exercicio-03',
     name: 'exercicio-03',
-    component: () => import(/* webpackChunkName: "exercicio-03" */ '../views/exercicio-03.vue')
+    component: () => import(/* webpackChunkName: "exercicio-03" */ '../views/Interacao/exercicio-03.vue')
   },
   {
-    path: '/exercicio-evento-01',
+    path: '/interacao/exercicio-evento-01',
     name: 'exercicio-evento-01',
-    component: () => import(/* webpackChunkName: "exercicio-evento-01" */ '../views/exercicio-evento-01.vue')
+    component: () => import(/* webpackChunkName: "exercicio-evento-01" */ '../views/Interacao/exercicio-evento-01.vue')
   },
   {
-    path: '/exercicio-evento-02',
+    path: '/interacao/exercicio-evento-02',
     name: 'exercicio-evento-02',
-    component: () => import(/* webpackChunkName: "exercicio-evento-02" */ '../views/exercicio-evento-02.vue')
+    component: () => import(/* webpackChunkName: "exercicio-evento-02" */ '../views/Interacao/exercicio-evento-02.vue')
   },
   {
-    path: '/propriedades-reativas-01',
+    path: '/interacao/propriedades-reativas-01',
     name: 'propriedades-reativas-01',
-    component: () => import(/* webpackChunkName: "propriedades-reativas-01" */ '../views/propriedades-reativas-01.vue')
+    component: () => import(/* webpackChunkName: "propriedades-reativas-01" */ '../views/Interacao/propriedades-reativas-01.vue')
   },
   {
-    path: '/propriedades-reativas-02',
+    path: '/interacao/propriedades-reativas-02',
     name: 'propriedades-reativas-02',
-    component: () => import(/* webpackChunkName: "propriedades-reativas-02" */ '../views/propriedades-reativas-02.vue')
+    component: () => import(/* webpackChunkName: "propriedades-reativas-02" */ '../views/Interacao/propriedades-reativas-02.vue')
   },
   {
-    path: '/estilo-dinamico-01',
+    path: '/interacao/estilo-dinamico-01',
     name: 'estilo-dinamico-01',
-    component: () => import(/* webpackChunkName: "estilo-dinamico-01" */ '../views/estilo-dinamico-01.vue')
+    component: () => import(/* webpackChunkName: "estilo-dinamico-01" */ '../views/Interacao/estilo-dinamico-01.vue')
+  },
+  {
+    path: '/condicionais',
+    name: 'Condicionais',
+    // route level code-splitting
+    // this generates a separate chunk (condicionais.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "exercicio-01" */ '../views/Condicionais.vue')
+  },
+  {
+    path: '/condicionais/exercicio-01',
+    name: 'exercicio-01',
+    // route level code-splitting
+    // this generates a separate chunk (exercicio-01.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "exercicio-01" */ '../views/Condicionais/exercicio-01.vue')
   }
 ]
 

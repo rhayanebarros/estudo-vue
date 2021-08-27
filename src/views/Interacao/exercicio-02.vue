@@ -1,7 +1,7 @@
 <template>
   <div class="exercicio-02">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <Nav/>
+    <Logo/>
+    <VoltarInteracao/>
     <h2 v-once>{{ titulo }}</h2>
     <!-- v-once permite que o valor só seja interpretado uma única vez -->
     <h3>{{ saudacao() }}</h3>
@@ -14,12 +14,14 @@
 
 <script>
 // @ is an alias to /src
-import Nav from '@/components/Nav.vue'
+import Logo from '@/components/Logo.vue'
+import VoltarInteracao from '@/components/VoltarInteracao.vue'
 
 export default {
   name: 'exercicio-02',
   components: {
-    Nav
+    Logo,
+    VoltarInteracao
   },
   data () {
     return {

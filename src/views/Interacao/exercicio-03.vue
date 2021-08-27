@@ -1,7 +1,7 @@
 <template>
   <div class="exercicio-03">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <Nav/>
+    <Logo/>
+    <VoltarInteracao/>
      <!-- 1) Preencha a tag <p> abaixo com o seu Nome e Idade - usando Interpolação -->
     <p  v-once>Usando VueJS - {{ nome }} ({{ idade }} anos)</p>
 
@@ -27,12 +27,14 @@
 
 <script>
 // @ is an alias to /src
-import Nav from '@/components/Nav.vue'
+import Logo from '@/components/Logo.vue'
+import VoltarInteracao from '@/components/VoltarInteracao.vue'
 
 export default {
   name: 'exercicio-03',
   components: {
-    Nav
+    Logo,
+    VoltarInteracao
   },
   data () {
     return {

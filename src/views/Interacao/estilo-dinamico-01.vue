@@ -1,7 +1,7 @@
 <template>
   <div class="estilo-dinamico-01">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <Nav/>
+    <Logo/>
+    <VoltarInteracao/>
     <div class="box">
       <div class="demo" :class="{c1: aplicarC1}"
         @click="aplicarC1 = !aplicarC1"></div>
@@ -43,12 +43,14 @@
 
 <script>
 // @ is an alias to /src
-import Nav from '@/components/Nav.vue'
+import Logo from '@/components/Logo.vue'
+import VoltarInteracao from '@/components/VoltarInteracao.vue'
 
 export default {
   name: 'estilo-dinamico-01',
   components: {
-    Nav
+    Logo,
+    VoltarInteracao
   },
   data () {
     return {
