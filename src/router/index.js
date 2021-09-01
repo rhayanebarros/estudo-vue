@@ -70,12 +70,19 @@ const routes = [
     component: () => import(/* webpackChunkName: "exercicio-01" */ '../views/Condicionais.vue')
   },
   {
+    path: '/condicionais/exemplo-01',
+    name: 'exemplo-01',
+    component: () => import(/* webpackChunkName: "exemplo-01" */ '../views/Condicionais/exemplo-01.vue')
+  },
+  {
+    path: '/condicionais/exemplo-02',
+    name: 'exemplo-02',
+    component: () => import(/* webpackChunkName: "exemplo-01" */ '../views/Condicionais/exemplo-02.vue')
+  },
+  {
     path: '/condicionais/exercicio-01',
     name: 'exercicio-01',
-    // route level code-splitting
-    // this generates a separate chunk (exercicio-01.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "exercicio-01" */ '../views/Condicionais/exercicio-01.vue')
+    component: () => import(/* webpackChunkName: "exemplo-01" */ '../views/Condicionais/exercicio-01.vue')
   }
 ]
 

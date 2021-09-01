@@ -1,5 +1,11 @@
 <template>
   <div class="nav" id="nav">
+    <router-link to="/condicionais/exemplo-01" @click.native="getNameEx($event)">
+      Exemplo 01
+    </router-link>
+    <router-link to="/condicionais/exemplo-02" @click.native="getNameEx($event)">
+      Exemplo 02
+    </router-link>
     <router-link to="/condicionais/exercicio-01" @click.native="getNameEx($event)">
       Exercício 01
     </router-link>
