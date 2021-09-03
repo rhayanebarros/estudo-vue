@@ -19,5 +19,8 @@ export default {
   font-weight: $semi-bold;
   font-size: 18px;
   margin: 20px auto;
+  &:before {
+    content: '<- ';
+  }
 }
 </style>

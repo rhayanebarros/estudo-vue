@@ -39,7 +39,7 @@ export default {
   width: 450px;
 }
 
-.nav a{
+.nav a {
   display: list-item;
   list-style: circle;
   list-style-position: inside;

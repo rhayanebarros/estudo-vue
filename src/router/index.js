@@ -81,8 +81,18 @@ const routes = [
   },
   {
     path: '/condicionais/exercicio-01',
-    name: 'exercicio-01',
+    name: 'condicionais-exercicio-01',
     component: () => import(/* webpackChunkName: "exemplo-01" */ '../views/Condicionais/exercicio-01.vue')
+  },
+  {
+    path: '/matador',
+    name: 'matador',
+    component: () => import(/* webpackChunkName: "exemplo-01" */ '../views/Matador.vue')
+  },
+  {
+    path: '/matador/jogo-matador',
+    name: 'jogo-matador',
+    component: () => import(/* webpackChunkName: "exemplo-01" */ '../views/Matador/jogo-matador.vue')
   }
 ]
 
