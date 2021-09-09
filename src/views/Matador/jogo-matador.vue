@@ -51,7 +51,14 @@
           class="btn new-game">Iniciar Jogo</button>
       </div>
 
-      <div class="content__panel logs">logs</div>
+      <div v-if="logs.length"
+        class="content__panel logs">
+        <ul>
+          <li v-for="log in logs" :key="log" class="log" :class="log.cls">
+            {{ log.text }}
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </template>
@@ -66,7 +73,8 @@ export default {
     return {
       running: false,
       playerLife: 100,
-      monsterLife: 100
+      monsterLife: 100,
+      logs: []
     }
   },
   computed: {
@@ -79,12 +87,15 @@ export default {
       this.running = true
       this.playerLife = 100
       this.monsterLife = 100
+      this.logs = []
     },
     attack (especial) {
-      this.hurt('monsterLife', 5, 10, especial)
-      this.hurt('playerLife', 7, 12, false)
+      this.hurt('monsterLife', 5, 10, especial, 'Jogador', 'Monstro', 'player')
+      if (this.monsterLife > 0) {
+        this.hurt('playerLife', 7, 12, false, 'Monstro', 'Jogador', 'monster')
+      }
     },
-    hurt (atr, min, max, especial) {
+    hurt (atr, min, max, especial, origin, target, cls) {
       // se for verdadeiro ele recebe 5 e se for falso ele recebe zero
       const plus = especial ? 5 : 0
       const hurt = this.getRandom(min + plus, max + plus)
@@ -92,18 +103,24 @@ export default {
       // se this.playerLife for negativo o maior numero será o zero
       // estou chamando o playerLife ou monsterLife através do atr passado dentro do colcetes
       this[atr] = Math.max(this[atr] - hurt, 0)
+      this.registerLog(`${origin} atingiu ${target} com ${hurt}.`, cls)
     },
     healAndHurt () {
       this.heal(10, 15)
-      this.hurt('playerLife', 7, 12, false)
+      this.hurt('playerLife', 7, 12, false, 'Monstro', 'Jogador', 'monster')
     },
     heal (min, max) {
       const heal = this.getRandom(min, max)
       this.playerLife = Math.min(this.playerLife + heal, 100)
+      this.registerLog(`Jogador ganhou força de ${heal}.`, 'player')
     },
     getRandom (min, max) {
       const value = Math.random() * (max - min) + min
       return Math.round(value)
+    },
+    registerLog (text, cls) {
+      // usando o unshift para o log mais recente ficar acima dos outros
+      this.logs.unshift({ text, cls })
     }
   },
   watch: {
@@ -292,6 +309,34 @@ h1 {
 
         &.new-game {
           background-color: #BC8F8F;
+        }
+      }
+    }
+
+    &.logs {
+      ul {
+        display: flex;
+        flex-direction: column;
+
+        li {
+          display: flex;
+          justify-content: center;
+          margin: 4px 0;
+          padding: 5px 0;
+          font-size: 16px;
+          font-family: "Raleway", sans-serif;
+          font-weight: 600;
+          text-transform: uppercase;
+          border-radius: 3px;
+
+          &.player {
+            background-color: #4682B4;
+            color: white;
+          }
+          &.monster {
+            background-color: #b22222cc;
+            color: white;
+          }
         }
       }
     }
