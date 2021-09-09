@@ -1,5 +1,5 @@
 <template>
-  <div id="nav">
+  <div class="menu" id="nav">
     <router-link to="/">Home<span>|</span></router-link>
     <router-link to="/interacao">Interação com a DOM<span>|</span></router-link>
     <router-link to="/condicionais">Condicionais e Listas<span>|</span></router-link>

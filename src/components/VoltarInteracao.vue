@@ -17,8 +17,13 @@ export default {
   display: block;
   font-family: $font;
   font-weight: $semi-bold;
-  font-size: 18px;
+  font-size: 16px;
   margin: 20px auto;
+
+  @include above(md) {
+    font-size: 18px;
+  }
+
   &:before {
     content: '<- ';
   }

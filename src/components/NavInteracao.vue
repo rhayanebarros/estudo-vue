@@ -32,14 +32,8 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-
-.nav {
-  text-align: left;
-  margin: 0 auto;
-  width: 450px;
-}
-
 .nav a {
+  color:#485664;
   display: list-item;
   list-style: circle;
   list-style-position: inside;

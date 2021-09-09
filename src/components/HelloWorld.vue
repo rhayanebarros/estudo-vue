@@ -16,10 +16,14 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
   h1 {
-    color: #2c3e50;
+    color: #36495e;
     font-family: $font;
     font-weight: $bold;
-    font-size: 24px;
+    font-size: 18px;
     margin: 20px 0;
+
+    @include above(md) {
+      font-size: 24px;
+    }
   }
 </style>

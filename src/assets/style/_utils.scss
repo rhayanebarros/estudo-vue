@@ -1,25 +1,58 @@
 .overflow-hidden {
-    overflow: hidden;
-    height: 100vh;
-  }
+  overflow: hidden;
+  height: 100vh;
+}
   
-  #nav {
-    padding-top: 10px;
-    margin-bottom: 30px;
-    a {
-      color: $black;
-      font-family: $font;
-      font-weight: $semi-bold;
-      font-size: 18px;
-  
-      &.router-link-exact-active {
-        color: $header;
-        text-decoration: underline;
-      }
+.menu,
+.nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
+  a {
+    color: #8B4513;
+    font-family: $font;
+    font-weight: $semi-bold;
+    font-size: 16px;
+    margin-bottom: 12px;
+
+    @include above(md) {
+      margin-bottom: 0;
+      font-size: 18px;
+    }
+
+    &.router-link-exact-active {
+      color: #b96021;
+      text-decoration: underline;
       span {
+        color: #8B4513;
+      }
+    }
+
+    span {
+      display: none;
+      @include above(md) {
+        display: inline-block;
         margin: 0 5px;
       }
     }
   }
+}
+
+.interacao,
+.condicionais,
+.matador {
+  #nav.menu {
+    display: none;
+  
+    @include above(md) {
+      margin-bottom: 10px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
   

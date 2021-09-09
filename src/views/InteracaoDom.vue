@@ -2,6 +2,7 @@
   <div class="interacao">
     <Logo/>
     <HelloWorld msg="Interação com a DOM"/>
+    <VoltarHome/>
     <Nav/>
     <NavInteracao/>
   </div>
@@ -12,6 +13,7 @@
 import Logo from '@/components/Logo.vue'
 import HelloWorld from '@/components/HelloWorld.vue'
 import Nav from '@/components/Nav.vue'
+import VoltarHome from '@/components/VoltarHome.vue'
 import NavInteracao from '@/components/NavInteracao.vue'
 
 export default {
@@ -20,6 +22,7 @@ export default {
     Logo,
     HelloWorld,
     Nav,
+    VoltarHome,
     NavInteracao
   }
 }

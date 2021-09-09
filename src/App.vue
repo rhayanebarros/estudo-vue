@@ -17,6 +17,10 @@
 #app {
   text-align: center;
   color: #2c3e50;
-  padding-top: 80px;
+  padding-top: 40px;
+
+  @include above(md) {
+    padding-top: 80px;
+  }
 }
 </style>

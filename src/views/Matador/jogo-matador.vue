@@ -115,6 +115,19 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.voltar {
+  margin-left: 20px;
+
+  @include above(lg) {
+    margin: 0 auto;
+    max-width: calc(100% - 40px);
+  }
+
+  @include above(xl) {
+    max-width: 1260px;
+  }
+}
+
 .voltar a {
   color: #41b883;
   display: block;
@@ -123,7 +136,6 @@ export default {
   font-size: 18px;
   margin: 0 auto;
   text-align: left;
-  margin-left: calc(50% - 400px);
 
   &:before {
     content: '<- ';
@@ -131,21 +143,39 @@ export default {
 }
 
 h1 {
-  font-size: 32px;
+  font-size: 28px;
   color: $blue-dark;
   font-family: "Raleway", sans-serif;
   font-weight: 600;
   margin-top: 20px;
+
+  @include above(md) {
+    font-size: 32px;
+  }
 }
 
 .content {
-  padding: 60px 0;
+  padding: 40px 0;
   width: 100%;
 
+  @include above(md) {
+    padding: 60px 0;
+  }
+
   &__panel {
-    margin: 10px;
-    padding: 20px;
+    margin: 0 20px 10px;
+    padding: 20px 5px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+
+    @include above(lg) {
+      max-width: calc(100% - 40px);
+      margin: 0 auto 10px;
+      padding: 20px;
+    }
+
+    @include above(xl) {
+      max-width: 1260px;
+    }
 
     &.scores {
       display: flex;
@@ -214,8 +244,19 @@ h1 {
     }
 
     &.buttons {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      @include above(md) {
+        flex-direction: row;
+        justify-content: center;
+      }
+
       .btn {
         color: #fff;
+        display: flex;
+        justify-content: center;
         font-size: 14px;
         font-family: "Raleway", sans-serif;
         font-weight: 400;
@@ -223,10 +264,14 @@ h1 {
         width: 160px;
         text-transform: uppercase;
         padding: 8px;
-        margin-right: 20px;
+        margin: 0 0 10px 0;
+
+        @include above(md) {
+          margin: 0 20px 0 0;
+        }
 
         &:last-child {
-          margin-right: 0;
+          margin: 0;
         }
 
         &.attack {

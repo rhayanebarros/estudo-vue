@@ -2,11 +2,12 @@
   <div class="matador">
     <Logo/>
     <HelloWorld msg="Jogo Matador de Monstro"/>
+    <VoltarHome/>
     <Nav/>
     <div class="nav">
-    <router-link to="/matador/jogo-matador">
-      Projeto Jogo Matador de Monstro
-    </router-link>
+      <router-link to="/matador/jogo-matador">
+        Projeto Jogo Matador de Monstro
+      </router-link>
     </div>
   </div>
 </template>
@@ -15,6 +16,7 @@
 // @ is an alias to /src
 import Logo from '@/components/Logo.vue'
 import HelloWorld from '@/components/HelloWorld.vue'
+import VoltarHome from '@/components/VoltarHome.vue'
 import Nav from '@/components/Nav.vue'
 
 export default {
@@ -22,23 +24,15 @@ export default {
   components: {
     Logo,
     HelloWorld,
+    VoltarHome,
     Nav
   }
 }
 </script>
 
 <style scoped lang="scss">
-.nav {
-  text-align: left;
-  margin: 0 auto;
-  width: 450px;
-}
-
 .nav a {
-  color: #000000;
-  font-family: "Raleway", sans-serif;
-  font-weight: 600;
-  font-size: 18px;
+  color:#485664;
   display: list-item;
   list-style: circle;
   list-style-position: inside;

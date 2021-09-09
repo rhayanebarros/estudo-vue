@@ -2,6 +2,7 @@
   <div class="condicionais">
     <Logo/>
     <HelloWorld msg="Condicionais e Listas"/>
+    <VoltarHome/>
     <Nav/>
     <NavCondicionais/>
   </div>
@@ -11,6 +12,7 @@
 // @ is an alias to /src
 import Logo from '@/components/Logo.vue'
 import HelloWorld from '@/components/HelloWorld.vue'
+import VoltarHome from '@/components/VoltarHome.vue'
 import Nav from '@/components/Nav.vue'
 import NavCondicionais from '@/components/NavCondicionais.vue'
 
@@ -19,6 +21,7 @@ export default {
   components: {
     Logo,
     HelloWorld,
+    VoltarHome,
     Nav,
     NavCondicionais
   }

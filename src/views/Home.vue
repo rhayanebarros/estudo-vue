@@ -23,4 +23,13 @@ export default {
 </script>
 
 <style scoped lang="scss">
+#nav.menu {
+  @include above(md) {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;;
+  }
+}
 </style>
