@@ -93,6 +93,16 @@ const routes = [
     path: '/matador/jogo-matador',
     name: 'jogo-matador',
     component: () => import(/* webpackChunkName: "exemplo-01" */ '../views/Matador/jogo-matador.vue')
+  },
+  {
+    path: '/comunicacao-comp',
+    name: 'comunicacao-comp',
+    component: () => import(/* webpackChunkName: "exemplo-01" */ '../views/ComunicacaoComp.vue')
+  },
+  {
+    path: '/comunicacao-comp/usuario',
+    name: 'usuario',
+    component: () => import(/* webpackChunkName: "exemplo-01" */ '../views/Comunicacao/Usuario.vue')
   }
 ]
 
